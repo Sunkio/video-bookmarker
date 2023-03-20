@@ -26,9 +26,9 @@
     ],
     "action": {
       "default_icon": {
-        "16": "assets/ext-icon.png",
-        "24": "assets/ext-icon.png",
-        "32": "assets/ext-icon.png"
+        "16": "assets/bookmark.png",
+        "24": "assets/bookmark.png",
+        "32": "assets/bookmark.png"
       },
       "default_title": "YT Bookmarker",
       "default_popup": "popup.html"

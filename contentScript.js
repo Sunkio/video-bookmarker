@@ -56,7 +56,35 @@ const checkForPlayer = async () => {
     return false; // Bookmark button not added
 };
 
+const addStyles = () => {
+  const style = document.createElement("style");
+  style.innerHTML = `
+    .bookmark-btn {
+          width: 46px !important;
+      height: 46px !important;
+      min-width: 46px !important;
+      min-height: 46px !important;
+      max-width: 46px !important;
+      max-height: 46px !important;
+      object-fit: contain;
+      margin-left: 8px;
+      margin-right: 8px;
+      z-index: 9999;
+      padding: 0 !important;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      }
+      
+    .ytp-chrome-controls {
+      margin-right: -92px !important;
+    }
+  `;
+  document.head.appendChild(style);
+};
+
 const init = async () => {
+   addStyles();
    return checkForPlayer();
 };
 
