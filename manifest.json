@@ -2,7 +2,7 @@
     "name": "YT Bookmarker",
     "version": "0.1.0",
     "description": "Saving timestamps in YT videos",
-    "permissions": ["storage", "tabs"],
+    "permissions": ["storage", "tabs", "webNavigation"],
     "host_permissions": ["https://*.youtube.com/*"],
     "background": {
       "service_worker": "background.js"

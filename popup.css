@@ -41,6 +41,19 @@
   padding-left: 2px;
 }
 
+.bookmark-timestamp {
+   display: inline-block;
+   width: 70px;
+}
+
+.bookmark-note {
+   display: inline-block;
+   width: 150px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
 .bookmark-controls img {
   margin: 0 4px;
   width: 18px;
@@ -51,4 +64,17 @@
 .bookmark-controls {
   flex: auto;
   text-align: right;
+     display: inline-block;
+}
+
+.delete-all-button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

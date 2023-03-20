@@ -14,3 +14,10 @@ chrome.tabs.onUpdated.addListener((tabId, tab) => {
         });
     }
 });
+
+chrome.webNavigation.onHistoryStateUpdated.addListener(async (details) => {
+  if (details.url.includes("youtube.com/watch")) {
+    const tabId = details.tabId;
+    chrome.tabs.sendMessage(tabId, { type: "NEW", videoId: new URLSearchParams(new URL(details.url).search).get("v") });
+  }
+});
