@@ -18,3 +18,18 @@ chrome.webNavigation.onHistoryStateUpdated.addListener((details) => {
     initContentScript(details.tabId, details.url);
   }
 });
+
+const showBadge = () => {
+  chrome.action.setBadgeText({ text: "\u2713" });
+  chrome.action.setBadgeBackgroundColor({ color: "red" });
+
+  setTimeout(() => {
+    chrome.action.setBadgeText({ text: "" });
+  }, 1500);
+};
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === "SHOW_BADGE") {
+    showBadge();
+  }
+});

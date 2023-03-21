@@ -25,6 +25,8 @@ const addNewBookmark = (bookmarksElement, bookmark) => {
   newBookmarkElement.appendChild(bookmarkNoteElement);
   newBookmarkElement.appendChild(controlsElement);
   bookmarksElement.appendChild(newBookmarkElement);
+  
+
 };
 
 const viewBookmarks = (currentBookmarks = []) => {
