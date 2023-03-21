@@ -4,13 +4,13 @@ let currentVideoBookmarks = [];
 
 const fetchBookmarks = () => {
   return new Promise((resolve) => {
-    if (chrome.runtime.lastError) {
-      console.error(chrome.runtime.lastError);
-      resolve([]);
-    } else {
+    if (chrome.runtime && !chrome.runtime.lastError) {
       chrome.storage.sync.get([currentVideo], (obj) => {
         resolve(obj[currentVideo] ? JSON.parse(obj[currentVideo]) : []);
       });
+    } else {
+      console.error("Extension context invalidated.");
+      resolve([]);
     }
   });
 };
