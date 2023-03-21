@@ -1,7 +1,7 @@
 {
     "name": "YT Bookmarker",
-    "version": "0.1.0",
-    "description": "Saving timestamps in YT videos",
+    "version": "1.0.0",
+    "description": "Add bookmarks and notes to Youtube videos",
     "permissions": ["storage", "tabs", "webNavigation"],
     "host_permissions": ["https://*.youtube.com/*"],
     "background": {
@@ -26,9 +26,9 @@
     ],
     "action": {
       "default_icon": {
-        "16": "assets/bookmark.png",
-        "24": "assets/bookmark.png",
-        "32": "assets/bookmark.png"
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
       },
       "default_title": "YT Bookmarker",
       "default_popup": "popup.html"

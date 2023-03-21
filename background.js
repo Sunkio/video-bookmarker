@@ -21,7 +21,7 @@ chrome.webNavigation.onHistoryStateUpdated.addListener((details) => {
 
 const showBadge = () => {
   chrome.action.setBadgeText({ text: "\u2713" });
-  chrome.action.setBadgeBackgroundColor({ color: "red" });
+  chrome.action.setBadgeBackgroundColor({ color: "#32bea6" });
 
   setTimeout(() => {
     chrome.action.setBadgeText({ text: "" });
