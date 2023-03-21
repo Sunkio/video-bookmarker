@@ -82,8 +82,6 @@ const addStyles = () => {
     .ytp-chrome-controls {
       margin-right: -92px !important;
     }
-    
-    
   `;
   document.head.appendChild(style);
 };
@@ -110,9 +108,6 @@ chrome.runtime.onMessage.addListener(async (obj, sender, response) => {
         response(currentVideoBookmarks);
     }
 });
-
-// Initialize the script
-//init();
 
 const getTime = t => {
     var date = new Date(0);

@@ -1,11 +1,30 @@
-<link href="popup.css" rel="stylesheet" type="text/css" />
-<script type="module" src="popup.js"></script>
-<script type="module" src="contentScript.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup</title>
+  <link href="popup.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <div>
+      <div class="title">Your bookmarks for this video</div>
 
-<div class="container">
-  <div>
-    <div class="title">Your bookmarks for this video</div>
-
-    <div class="bookmarks" id="bookmarks"></div>
+      <div class="bookmarks" id="bookmarks"></div>
+    </div>
   </div>
-</div>
+
+  <!-- Add the edit modal HTML -->
+  <div id="editModal" class="edit-modal">
+    <div class="edit-modal-content">
+      <span id="editModalClose" class="edit-modal-close">&times;</span>
+      <h2>Edit Note</h2>
+      <textarea id="editNoteText" rows="4" style="width: 100%;"></textarea>
+      <button id="saveEditNote" style="margin-top: 10px;">Save</button>
+    </div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
