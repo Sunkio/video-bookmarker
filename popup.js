@@ -1,8 +1,6 @@
 import { getActiveTabURL } from "./utils.js";
 import { getTime } from "./utils.js";
 
-
-// Function to show the edit modal and pre-fill the text field with the existing note
 const showEditModal = (bookmark) => {
   const editModal = document.getElementById("editModal");
   const editNoteText = document.getElementById("editNoteText");
@@ -25,7 +23,6 @@ const showEditModal = (bookmark) => {
   };
 };
 
-// Function to save the edited note
 const saveEditedNote = async (bookmark, editedText) => {
   // Update the bookmark's description with the edited text
   bookmark.desc = editedText;
@@ -113,7 +110,6 @@ const viewBookmarks = (currentBookmarks = []) => {
     deleteAllButton.className = "delete-all-button";
     bookmarksElement.appendChild(deleteAllButton);
 
-    // Add click event listener to the "Delete all" button
     deleteAllButton.addEventListener("click", onDeleteAll);
   }
 
@@ -125,8 +121,6 @@ const viewBookmarks = (currentBookmarks = []) => {
     bookmarksElement.innerHTML = '<i class="row">No bookmarks to show.</i>';
   }
 };
-
-
 
 const onPlay = async e => {
   const bookmarkTime = e.target.parentNode.parentNode.getAttribute("timestamp");
@@ -150,7 +144,6 @@ const onEdit = async e => {
     const bookmarkToEdit = currentBookmarks.find(bookmark => bookmark.time === parseFloat(bookmarkTime));
 
     if (bookmarkToEdit) {
-      // Call the showEditModal function with the bookmark to edit
       showEditModal(bookmarkToEdit);
     }
   });

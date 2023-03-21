@@ -100,7 +100,7 @@
   padding: 20px;
   width: 80%;
   max-width: 500px;
-  min-height: 160px; /* Adjust this value based on your preference */
+  min-height: 160px;
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
