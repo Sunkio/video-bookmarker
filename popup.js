@@ -86,9 +86,14 @@ const addNewBookmark = (bookmarksElement, bookmark) => {
 
   setBookmarkAttributes("play", onPlay, controlsElement);
   setBookmarkAttributes("edit", onEdit, controlsElement);
-  setBookmarkAttributes("delete", onDelete, controlsElement);
 
-  newBookmarkElement.id = "bookmark-" + bookmark.time;
+  // Create a closure for the onDelete event listener
+  const onDeleteClosure = (e) => {
+    onDelete(e, bookmark.time);
+  };
+  setBookmarkAttributes("delete", onDeleteClosure, controlsElement);
+
+  newBookmarkElement.id = "bookmark-" + bookmark.time.toFixed(3);
   newBookmarkElement.className = "bookmark";
   newBookmarkElement.setAttribute("timestamp", bookmark.time);
 
@@ -97,6 +102,7 @@ const addNewBookmark = (bookmarksElement, bookmark) => {
   newBookmarkElement.appendChild(controlsElement);
   bookmarksElement.appendChild(newBookmarkElement);
 };
+
 
 const viewBookmarks = (currentBookmarks = []) => {
   const bookmarksElement = document.getElementById("bookmarks");
@@ -149,14 +155,13 @@ const onEdit = async e => {
   });
 };
 
-const onDelete = async e => {
+const onDelete = async (e, bookmarkTime) => {
   const activeTab = await getActiveTabURL();
   const queryParameters = activeTab.url.split("?")[1];
   const urlParameters = new URLSearchParams(queryParameters);
   const currentVideo = urlParameters.get("v");
-  const bookmarkTime = e.target.parentNode.parentNode.getAttribute("timestamp");
   const bookmarkElementToDelete = document.getElementById(
-    "bookmark-" + bookmarkTime
+    "bookmark-" + bookmarkTime.toFixed(3)
   );
 
   bookmarkElementToDelete.parentNode.removeChild(bookmarkElementToDelete);
@@ -166,7 +171,7 @@ const onDelete = async e => {
     let currentBookmarks = data[currentVideo] ? JSON.parse(data[currentVideo]) : [];
 
     // Filter out the deleted bookmark
-    currentBookmarks = currentBookmarks.filter(bookmark => bookmark.time !== parseInt(bookmarkTime));
+    currentBookmarks = currentBookmarks.filter(bookmark => Math.abs(bookmark.time - bookmarkTime) > 0.001);
 
     // Update the stored bookmarks
     chrome.storage.sync.set({ [currentVideo]: JSON.stringify(currentBookmarks) }, () => {
@@ -200,6 +205,8 @@ const setBookmarkAttributes = (src, eventListener, controlParentElement) => {
   controlElement.title = src;
   controlElement.addEventListener("click", eventListener);
   controlParentElement.appendChild(controlElement);
+
+  return eventListener;
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
