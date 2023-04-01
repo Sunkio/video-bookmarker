@@ -5,13 +5,13 @@ YT Bookmarker is a Chrome extension that enhances the experience of watching You
 You can find the [published extension in the Chrome Web Store](https://chrome.google.com/webstore/detail/yt-bookmarker/docgcaajjlhikhllnlkfmffciiokggag/related) for installation. It's free to use and only uses local browser storage. No sign-up necessary.
 
 ![YT Bookmarker - No Screenshots](./img/yt-bookmarker_3.png)
-*No Screenshots*
+*No Bookmarks*
 
 ![YT Bookmarker - With Screenshots](./img/yt-bookmarker_1.png)
-*With Screenshots*
+*With Bookmarks*
 
 ![YT Bookmarker - Edit Screenshots](./img/yt-bookmarker_2.png)
-*Edit Screenshots*
+*Edit Bookmarks*
 
 
 ## Table of Contents
