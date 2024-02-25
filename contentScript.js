@@ -74,11 +74,18 @@ const addStyles = () => {
         margin-right: 8px;
         z-index: 9999;
         padding: 0 !important;
-        display: flex;
+        display: inline-block !important;
         justify-content: center;
         position: relative;
       }
-      
+     
+     .bookmark-btn:hover {
+        cursor: pointer;
+
+        background-color: rgba(0, 0, 0, .05);
+        border: 1px solid rgba(0, 0, 0, .05);
+     }
+     
     .ytp-chrome-controls {
       margin-right: 0 !important;
     }
