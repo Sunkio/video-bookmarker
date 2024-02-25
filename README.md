@@ -1,15 +1,17 @@
-#YT Bookmarker
+# YT Bookmarker
 
 YT Bookmarker is a Chrome extension that enhances the experience of watching YouTube videos by allowing users to create and manage bookmarks with custom notes at specific timestamps in YouTube videos.
 
+You can find the [published extension in the Chrome Web Store](https://chrome.google.com/webstore/detail/yt-bookmarker/docgcaajjlhikhllnlkfmffciiokggag/related) for installation. It's free to use and only uses local browser storage. No sign-up necessary.
+
 ![YT Bookmarker - No Screenshots](./img/yt-bookmarker_3.png)
-*No Screenshots*
+*No Bookmarks*
 
 ![YT Bookmarker - With Screenshots](./img/yt-bookmarker_1.png)
-*With Screenshots*
+*With Bookmarks*
 
 ![YT Bookmarker - Edit Screenshots](./img/yt-bookmarker_2.png)
-*Edit Screenshots*
+*Edit Bookmarks*
 
 
 ## Table of Contents
@@ -32,7 +34,7 @@ YT Bookmarker is a Chrome extension that enhances the experience of watching You
 4. Edit existing bookmarks
 5. Delete bookmarks
 
-## Getting Startedd
+## Getting Started
 Follow these steps to set up MovieWhiz on your local machine.
 
 ## Prerequisites
