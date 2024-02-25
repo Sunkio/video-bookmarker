@@ -80,7 +80,7 @@ const addStyles = () => {
       }
       
     .ytp-chrome-controls {
-      margin-right: -92px !important;
+      margin-right: 0 !important;
     }
   `;
   document.head.appendChild(style);
