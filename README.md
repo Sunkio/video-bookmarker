@@ -97,4 +97,5 @@ This project is open-source and available under the [MIT License](./LICENSE.md).
 
 ## Support
 
-If you have any questions or need help getting started, please open an issue in the repository or contact me on Twitter: @tanja_codes
+If you have any questions or need help getting started, please open an issue in the repository or contact me via email: <a href="mailto:hello@tanjaschmidt.com">hello@tanjaschmidt.com</a>
+
