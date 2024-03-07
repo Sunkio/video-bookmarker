@@ -1,6 +1,6 @@
 {
     "name": "YT Bookmarker",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Add bookmarks and notes to Youtube videos",
     "permissions": ["storage", "tabs", "webNavigation"],
     "host_permissions": ["https://*.youtube.com/*"],

@@ -122,3 +122,14 @@ const getTime = t => {
 
     return date.toISOString().substr(11, 8);
 };
+
+
+document.addEventListener('keydown', function(event) {
+  if (event.shiftKey && event.key === 'A') {
+    const tagName = event.target.tagName.toLowerCase();
+    if (tagName !== 'input' && tagName !== 'textarea' && !event.target.isContentEditable) {
+      event.preventDefault();
+      addNewBookmarkEventHandler();
+    }
+  }
+});

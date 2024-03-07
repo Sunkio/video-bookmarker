@@ -1,4 +1,3 @@
-
 // A helper function to handle the initialization
 const initContentScript = (tabId, url) => {
   const videoId = new URLSearchParams(new URL(url).search).get("v");
@@ -31,5 +30,11 @@ const showBadge = () => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "SHOW_BADGE") {
     showBadge();
+  }
+});
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+  if (request.type === 'ADD_BOOKMARK') {
+    addNewBookmarkEventHandler();
   }
 });
